@@ -42,18 +42,12 @@ export default {
     },
     addGift() {
       if (!this.name) {
-        this.$store.dispatch('showNotification', {
-          message: 'Введите название подарка',
-          type: 'danger'
-        });
+        alert('Названия нэмае')
         return;
       }
 
       if (!this.isValidUrl(this.link)) {
-        this.$store.dispatch('showNotification', {
-          message: 'Некорректная ссылка',
-          type: 'danger'
-        });
+        alert('Введите корректную ссылку!')
         return;
       }
 
