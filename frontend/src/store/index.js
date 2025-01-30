@@ -19,14 +19,14 @@ export default createStore({
     actions: {
         saveToken({ commit }, token) {
             commit('SET_TOKEN', token);
-            localStorage.setItem('token', token); // Сохраняем токен в localStorage
-            setAuthToken(token); // Устанавливаем токен в заголовках Axios
+            localStorage.setItem('token', token);
+            setAuthToken(token);
         },
         loadToken({ commit }) {
             const token = localStorage.getItem('token');
             if (token) {
                 commit('SET_TOKEN', token);
-                setAuthToken(token); // Устанавливаем токен в заголовках Axios
+                setAuthToken(token);
             }
         },
         logout({ commit }) {
