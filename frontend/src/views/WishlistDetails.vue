@@ -51,19 +51,12 @@ export default {
 
       this.isOwner = wishlistOwnerResponse.data.is_owner;
     } catch (error) {
-      this.showError('Ошибка загрузки данных');
+      alert('Ошибка загрузки данных');
     }
   },
   methods: {
     ...mapActions(['showNotification']),
 
-
-    showError(message) {
-      this.showNotification({
-        message: message,
-        type: 'danger'
-      });
-    },
 
     async handleGiftAdded(giftData) {
       try {
