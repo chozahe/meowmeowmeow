@@ -45,11 +45,12 @@ export default {
     try {
       const wishlistId = this.$route.params.id;
       const wishlistOwnerResponse = await api.isOwner(wishlistId);
+      this.isOwner = wishlistOwnerResponse.data.is_owner;
+
 
       const giftsResponse = await api.getWishlist(wishlistId);
       this.gifts = giftsResponse.data;
 
-      this.isOwner = wishlistOwnerResponse.data.is_owner;
     } catch (error) {
       alert('Ошибка загрузки данных');
     }

@@ -41,7 +41,7 @@ export default {
         const response = await api.getWishlists();
         this.wishlists = response.data;
       } catch (error) {
-        console.error('Ошибка загрузки вишлистов:', error.message);
+        console.error('Ошибка загрузки вишлистов: ', error.message);
       }
     }
   },
