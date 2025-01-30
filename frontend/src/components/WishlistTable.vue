@@ -4,7 +4,7 @@
     У вас пока нет вишлистов. Создайте новый!
   </div>
   <div v-else class="mt-4">
-    <h2 class="text-secondary">Ваши вишлисты</h2>
+    <h2 class="text-secondary">Вишлисты:</h2>
     <ul class="list-group shadow-sm rounded overflow-hidden">
       <li
           v-for="wishlist in wishlists"
